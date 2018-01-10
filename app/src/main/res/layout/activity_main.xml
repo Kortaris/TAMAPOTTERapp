@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray"
+    tools:context="com.example.kitsune.tamapotter.MainActivity">
+
+    <ImageView
+        android:id="@+id/fon"
+        android:layout_width="380dp"
+        android:layout_height="530dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/room" />
+
+    <ImageView
+        android:id="@+id/sova"
+        android:layout_width="258dp"
+        android:layout_height="275dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:onClick="onClickSova"
+        app:layout_constraintBottom_toBottomOf="@+id/fon"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toTopOf="@+id/fon"
+        app:layout_constraintVertical_bias="0.61"
+        app:srcCompat="@drawable/s" />
+
+    <ImageView
+        android:id="@+id/eat"
+        android:layout_width="120dp"
+        android:layout_height="88dp"
+        android:layout_marginBottom="264dp"
+        android:layout_marginEnd="32dp"
+        android:onClick="onClickEat"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sova"
+        app:layout_constraintEnd_toEndOf="@+id/sova"
+        app:srcCompat="@drawable/eat" />
+
+    <ImageView
+        android:id="@+id/shower"
+        android:layout_width="122dp"
+        android:layout_height="70dp"
+        android:layout_marginBottom="244dp"
+        android:layout_marginEnd="168dp"
+        android:onClick="onClickShower"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sova"
+        app:layout_constraintEnd_toEndOf="@+id/sova"
+        app:srcCompat="@drawable/shower" />
+
+    <ImageView
+        android:id="@+id/sleep"
+        android:layout_width="108dp"
+        android:layout_height="66dp"
+        android:layout_marginBottom="224dp"
+        android:layout_marginStart="184dp"
+        android:onClick="onClickSleep"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/sova"
+        app:layout_constraintStart_toStartOf="@+id/sova"
+        app:srcCompat="@drawable/sleep" />
+
+    <ProgressBar
+        android:id="@+id/HP"
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="306dp"
+        android:layout_height="43dp"
+        android:layout_marginBottom="60dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/sova"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/lv"
+        android:layout_width="84dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:text="LV 1"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toBottomOf="@+id/HP"
+        app:layout_constraintEnd_toEndOf="@+id/HP"
+        app:layout_constraintStart_toStartOf="@+id/HP"
+        app:layout_constraintTop_toTopOf="@+id/HP" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:text="Голод"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="52dp"
+        android:text="Чистота"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="72dp"
+        android:text="Энергия"
+        android:textColor="@android:color/background_light"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.168"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova" />
+
+    <ProgressBar
+        android:id="@+id/hungry"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="191dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="55dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/fon"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ProgressBar
+        android:id="@+id/clean"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="191dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="35dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/fon"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ProgressBar
+        android:id="@+id/energy"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="191dp"
+        android:layout_height="8dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:max="100"
+        android:progressDrawable="@drawable/progressbar"
+        app:layout_constraintBottom_toBottomOf="@+id/fon"
+        app:layout_constraintEnd_toEndOf="@+id/fon"
+        app:layout_constraintHorizontal_bias="0.739"
+        app:layout_constraintStart_toStartOf="@+id/fon"
+        app:layout_constraintTop_toBottomOf="@+id/sova"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <ImageView
+        android:id="@+id/start"
+        android:layout_width="378dp"
+        android:layout_height="529dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginStart="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/room01" />
+
+    <ImageView
+        android:id="@+id/ngame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:onClick="onClickNew"
+        app:layout_constraintBottom_toBottomOf="@+id/start"
+        app:layout_constraintStart_toStartOf="@+id/start"
+        app:srcCompat="@drawable/ngame" />
+
+    <ImageView
+        android:id="@+id/ogame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:onClick="onClickStart"
+        app:layout_constraintBottom_toBottomOf="@+id/start"
+        app:layout_constraintEnd_toEndOf="@+id/start"
+        app:srcCompat="@drawable/ogame" />
+
+    <Chronometer
+        android:id="@+id/chrono"
+        android:layout_width="59dp"
+        android:layout_height="20dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginEnd="8dp"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+</android.support.constraint.ConstraintLayout>
