@@ -156,8 +156,40 @@ public class MainActivity extends AppCompatActivity {
             case 8:
                 ISova.setImageResource(R.drawable.s3);
                 break;
-            default:
+            case 9:
+            case 10:
                 ISova.setImageResource(R.drawable.s4);
+                break;
+            case 11:
+            case 12:
+                ISova.setImageResource(R.drawable.s5);
+                break;
+            case 13:
+            case 14:
+                ISova.setImageResource(R.drawable.s6);
+                break;
+            case 15:
+            case 16:
+                ISova.setImageResource(R.drawable.s7);
+                break;
+            case 17:
+            case 18:
+                ISova.setImageResource(R.drawable.s8);
+                break;
+            case 19:
+            case 20:
+                ISova.setImageResource(R.drawable.s9);
+                break;
+            case 21:
+            case 22:
+                ISova.setImageResource(R.drawable.s10);
+                break;
+            case 23:
+            case 24:
+                ISova.setImageResource(R.drawable.s11);
+                break;
+            default:
+                ISova.setImageResource(R.drawable.s12);
                 break;
         }
         TimeToEvent();
@@ -191,6 +223,38 @@ public class MainActivity extends AppCompatActivity {
                     break;
                 case 9:
                     ISova.setImageResource(R.drawable.s4);
+                    x = 3 * lv;
+                    break;
+                case 11:
+                    ISova.setImageResource(R.drawable.s5);
+                    x = 3 * lv;
+                    break;
+                case 13:
+                    ISova.setImageResource(R.drawable.s6);
+                    x = 3 * lv;
+                    break;
+                case 15:
+                    ISova.setImageResource(R.drawable.s7);
+                    x = 3 * lv;
+                    break;
+                case 17:
+                    ISova.setImageResource(R.drawable.s8);
+                    x = 3 * lv;
+                    break;
+                case 19:
+                    ISova.setImageResource(R.drawable.s9);
+                    x = 3 * lv;
+                    break;
+                case 21:
+                    ISova.setImageResource(R.drawable.s10);
+                    x = 3 * lv;
+                    break;
+                case 23:
+                    ISova.setImageResource(R.drawable.s11);
+                    x = 3 * lv;
+                    break;
+                case 25:
+                    ISova.setImageResource(R.drawable.s12);
                     x = 3 * lv;
                     break;
             }
@@ -283,7 +347,7 @@ public class MainActivity extends AppCompatActivity {
                                     mSettings.getInt(APP_PREFERENCES_CLEAN, 0)>0 &
                                     mSettings.getInt(APP_PREFERENCES_ENERGY, 0)>0) {
                                 SharedPreferences.Editor editor = mSettings.edit();
-                                editor.putInt(APP_PREFERENCES_HUNGRY, mSettings.getInt(APP_PREFERENCES_HUNGRY, 0)-20);
+                                editor.putInt(APP_PREFERENCES_HUNGRY, mSettings.getInt(APP_PREFERENCES_HUNGRY, 0)-10);
                                 editor.putInt(APP_PREFERENCES_CLEAN, mSettings.getInt(APP_PREFERENCES_CLEAN, 0)-10);
                                 editor.putInt(APP_PREFERENCES_ENERGY, mSettings.getInt(APP_PREFERENCES_ENERGY, 0) - 5);
                                 editor.apply();
@@ -308,12 +372,9 @@ public class MainActivity extends AppCompatActivity {
                                 editor.putInt(APP_PREFERENCES_CLEAN, 50);
                                 editor.putInt(APP_PREFERENCES_ENERGY, 50);
                                 editor.apply();
-                                mes = "Ваш питомец умер, придется начинать заново";
+                                mes = "Ваш питомец умер, придется начинать заново(";
                                 Message(mes);
                             }
-
-
-
                         }
                     });
                 }
