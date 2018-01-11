@@ -346,10 +346,13 @@ public class MainActivity extends AppCompatActivity {
                             if (mSettings.getInt(APP_PREFERENCES_HUNGRY, 0)>0 &
                                     mSettings.getInt(APP_PREFERENCES_CLEAN, 0)>0 &
                                     mSettings.getInt(APP_PREFERENCES_ENERGY, 0)>0) {
+                                hu = mSettings.getInt(APP_PREFERENCES_HUNGRY, 0);
+                                cl = mSettings.getInt(APP_PREFERENCES_CLEAN, 0);
+                                en = mSettings.getInt(APP_PREFERENCES_ENERGY, 0);
                                 SharedPreferences.Editor editor = mSettings.edit();
-                                editor.putInt(APP_PREFERENCES_HUNGRY, mSettings.getInt(APP_PREFERENCES_HUNGRY, 0)-10);
-                                editor.putInt(APP_PREFERENCES_CLEAN, mSettings.getInt(APP_PREFERENCES_CLEAN, 0)-10);
-                                editor.putInt(APP_PREFERENCES_ENERGY, mSettings.getInt(APP_PREFERENCES_ENERGY, 0) - 5);
+                                editor.putInt(APP_PREFERENCES_HUNGRY, hu-10);
+                                editor.putInt(APP_PREFERENCES_CLEAN, cl-10);
+                                editor.putInt(APP_PREFERENCES_ENERGY,  en- 5);
                                 editor.apply();
                                 mes = "Показатели уменьшились";
                                 Message(mes);
